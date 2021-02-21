@@ -1,0 +1,43 @@
+{
+  "name": "EVA",
+  "version": "1.0.0",
+  "description": "New build",
+  "author": "Artiom Ponomariov",
+  "license": "MIT",
+  "main": "production/index.html",
+  "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r production/css/*.css",
+    "scss": "node-sass --output-style expanded --indent-width 4 -o production/css development/scss/index.scss",
+    "html": "copyfiles -f development/index.html production",
+    "img": "copyfiles -f development/img/**/*.* production/img/",
+    "css": "copyfiles -f development/css/*.css production/css",
+    "uglify": "uglifyjs development/js/*.js -m -o production/js/scripts.js",
+    "serve": "browser-sync start --server './production'  --files 'production/index.html, production/css/*.css, production/js/*.js'",
+    "build:scss": "npm run scss && npm run autoprefixer",
+    "build:css": "npm run css",
+    "build:js": "npm run uglify",
+    "build:html": "npm run html",
+    "build:img": "npm run img",
+    "build:all": "npm run build:css && npm run build:js && npm run build:html && npm run build:img && npm run build:scss",
+    "watch:html": "onchange 'development/index.html' -- npm run html",
+    "watch:scss": "onchange 'development/scss' -- npm run build:scss",
+    "watch:css": "onchange 'development/css' -- npm run build:css",
+    "watch:js": "onchange 'development/js' -- npm run build:js",
+    "watch:img": "onchange 'development/img' -- npm run build:img",
+    "watch:all": "npm-run-all -p serve watch:scss watch:css watch:js watch:html watch:img",
+    "start": "npm run build:all && npm run watch:all"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "browser-sync": "^2.18.8",
+    "copyfiles": "^2.3.0",
+    "inline-svg": "^2.2.3",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^3.0.0-beta",
+    "uglify-es": "^3.3.9"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
