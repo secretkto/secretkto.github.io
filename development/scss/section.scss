@@ -1,0 +1,385 @@
+.section--header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  img {
+    display: block;
+    margin-right: 20px;
+  }
+
+  a {
+    display: inline-block;
+    margin-right: 40px;
+    color: var(--white);
+  }
+
+}
+
+.section--hero {
+  background: var(--gradient-purple-1);
+  color: var(--white);
+  padding-top: 150px;
+  padding-bottom: 80px;
+
+  .img--bg {
+    position: absolute;
+    right: -100px;
+  }
+
+  .box--numbers {
+    flex-wrap: wrap;
+    max-width: 150px;
+    margin-left: 20px;
+  }
+
+  .box--cta {
+    margin-top: 50px;
+  }
+
+  .text--desc {
+    margin-top: 30px;
+  }
+}
+
+.section--how {
+  background: var(--tile);
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  .box--bunny {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 50px;
+    align-items: center;
+    align-content: center;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    @include m(xl) {
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .box--item {
+    position: absolute;
+    width: 350px;
+    @include m(xl) {
+      width: 20vw;
+    }
+
+    &.is1 {
+      left: 0;
+      top: 0;
+    }
+
+    &.is2 {
+      left: -90px;
+      @include m(xl) {
+        left: -7vw;
+      }
+    }
+
+    &.is3 {
+      left: 0;
+      bottom: 0;
+    }
+
+    &.is4 {
+      right: 0;
+      top: 0;
+    }
+
+    &.is5 {
+      right: -90px;
+      @include m(xl) {
+        right: -7vw;
+      }
+    }
+
+    &.is6 {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .img--bg, .box--item {
+    z-index: 1;
+  }
+
+  .img--bg {
+    position: relative;
+    @include m(xl) {
+      width: 60vw;
+    }
+  }
+
+  .img--puzzle {
+    @include m(xl) {
+      width: 6vw;
+    }
+  }
+
+  .img--message {
+    @include m(xl) {
+      width: 6.4vw;
+    }
+  }
+
+  .img--book {
+    @include m(xl) {
+      width: 6.4vw;
+    }
+  }
+
+  .img--heart {
+    @include m(xl) {
+      width: 6.4vw;
+    }
+  }
+
+  .img--phones {
+    @include m(xl) {
+      width: 5.4vw;
+    }
+  }
+
+  .img--teeth {
+    @include m(xl) {
+      width: 7.4vw;
+    }
+  }
+
+  .img--pattern-1 {
+    position: absolute;
+    right: -80px;
+    top: 20px;
+    @include m(xl) {
+      width: 5vw;
+      right: -5vw;
+      top: 2vw;
+    }
+  }
+
+  .img--pattern-2 {
+    position: absolute;
+    left: -130px;
+    top: 80px;
+    @include m(xl) {
+      width: 5vw;
+      left: -5vw;
+      top: 7vw;
+    }
+  }
+
+  .text--vw-title {
+    @include m(xl) {
+      font-size: 1.5vw;
+    }
+  }
+
+  .text--vw-desc {
+    @include m(xl) {
+      font-size: 1.1vw;
+    }
+  }
+}
+
+.section--buy {
+  background: var(--tile);
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  .row--circles {
+    margin-top: -80px;
+  }
+
+  .text--desc {
+    margin-top: 40px;
+  }
+
+  .img--bg {
+    position: relative;
+    right: -50px;
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+
+  .text--mini {
+    margin-top: 30px;
+  }
+}
+
+.section--parent {
+  background: var(--tile);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+
+  .img--bg {
+    position: relative;
+    right: 30px;
+    z-index: 2;
+  }
+
+  .row--text {
+    margin-top: 50px;
+  }
+
+  .card {
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.section--sub {
+  background: var(--grey-1);
+  padding-top: 100px;
+  padding-bottom: 150px;
+  position: relative;
+
+  .row--cards {
+    margin-top: 100px;
+  }
+
+  .img--bg {
+    position: relative;
+    right: 30px;
+    z-index: 2;
+  }
+
+  .col--phone {
+    position: relative;
+  }
+
+  .card--default {
+    position: absolute;
+    z-index: 2;
+    max-width: 450px;
+    bottom: 0;
+  }
+
+  .box--stat {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .box--tags {
+    margin-top: 20px;
+  }
+}
+
+.section--joy {
+  background: var(--grey-1);
+  position: relative;
+  padding-bottom: 400px;
+
+  .card--review {
+    margin-top: 30px;
+    width: 70%;
+
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+  }
+
+  .row {
+    position: relative;
+    z-index: 2;
+  }
+
+  .box--right {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+.section--back {
+  background: var(--grey-1);
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  .card--section {
+    margin-top: -300px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .box--cta {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .box--numbers {
+    width: 100%;
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+
+  .text--price {
+    margin-right: 20px;
+  }
+}
+
+.section--more {
+  background: var(--grey-1);
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  .row--cards {
+    flex-wrap: wrap;
+    margin-top: -30px;
+  }
+
+  .col.is4_10 {
+    padding-left: 40px;
+  }
+}
+
+.section--footer {
+  background: var(--purple-2);
+  color: var(--white);
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+  .text--item {
+    color: inherit;
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  .circle:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .img--visa {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .img--logo {
+    position: relative;
+    left: -5px;
+    top: -5px;
+  }
+
+  .box--cr {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+}
