@@ -10,6 +10,8 @@
     "scss": "node-sass --output-style expanded --indent-width 4 -o production/css development/scss/index.scss",
     "html": "copyfiles -f development/index.html production",
     "img": "copyfiles -f development/img/**/*.* production/img/",
+    "img:remove": "rm ./production/img/*",
+    "img:rebuild": "npm run img:remove && npm rub img",
     "css": "copyfiles -f development/css/*.css production/css",
     "uglify": "uglifyjs development/js/*.js -m -o production/js/scripts.js",
     "serve": "browser-sync start --server './production'  --files 'production/index.html, production/css/*.css, production/js/*.js'",
