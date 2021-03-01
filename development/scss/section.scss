@@ -1,3 +1,7 @@
+.section {
+  position: relative;
+}
+
 .section--header {
   position: absolute;
   top: 0;
@@ -19,31 +23,16 @@
 }
 
 .section--hero {
-  background: var(--gradient-purple-1);
   color: var(--white);
-  padding-top: 130px;
-  padding-bottom: 80px;
+
+  .container {
+    padding: 100px;
+  }
 
   .img--bg {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .box--numbers {
-    flex-wrap: wrap;
-    max-width: 150px;
-    margin-left: 20px;
-    .text.isLg{
-      line-height: 0.9;
-    }
-    .text.isMd{
-      line-height: 1.3;
-    }
-  }
-
-  .box--cta {
-    margin-top: 50px;
   }
 
   .text--desc {
@@ -53,7 +42,6 @@
 }
 
 .section--how {
-  background: var(--tile);
   padding-top: 120px;
   padding-bottom: 80px;
 
@@ -198,7 +186,6 @@
 }
 
 .section--buy {
-  background: var(--tile);
   padding-top: 50px;
   padding-bottom: 80px;
 
@@ -225,9 +212,7 @@
 }
 
 .section--parent {
-  background: var(--tile);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   position: relative;
 
   .img--bg {
@@ -247,14 +232,271 @@
   }
 }
 
-.section--sub {
-  background: var(--grey-1);
+.section--moon {
+  &.is2 {
+    padding-top: 140px;
+  }
+
+  .box--title {
+    max-width: 230px;
+  }
+
+  .box--tasks {
+  }
+
+  .tag {
+    margin-right: 30px;
+  }
+
+  .row--kid {
+    align-items: center;
+  }
+
+  .circle {
+    position: relative;
+
+    &:nth-child(1) {
+      top: -30px;
+    }
+
+    &:nth-child(2) {
+      top: -15px;
+      left: -20px;
+    }
+
+    &:nth-child(3) {
+      top: -55px;
+      left: -30px;
+    }
+
+    &:nth-child(4) {
+      top: -15px;
+      left: -30px;
+    }
+  }
+
+  .row--text {
+    justify-content: space-between;
+  }
+}
+
+.section--review {
+  .text--avatar {
+    margin-top: 30px;
+  }
+
+  .row--review {
+    --gap: 50px;
+  }
+
+  .col--avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.is3 {
+    padding-bottom: 250px;
+  }
+
+  &.isDark {
+    color: var(--white);
+
+    .text--review {
+      font-weight: 300;
+    }
+  }
+}
+
+.section--step {
+  .box--title {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 350px;
+  }
+
+  .row--text {
+    --gap: 40px;
+    @include m(md) {
+      --gap: 20px;
+    }
+  }
+
+  .row--title {
+    --gap: 40px;
+    margin-top: 100px;
+    @include m(lg) {
+      margin-top: 100px;
+    }
+    @include m(md) {
+      margin-top: 50px;
+      justify-content: center;
+      --gap: 20px;
+    }
+  }
+}
+
+.section--step-1 {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  .container {
+    margin-top: 60px;
+  }
+
+  .col--video {
+    @include m(md) {
+      order: -1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .box--title {
+    @include m(md) {
+      margin-top: 60px;
+    }
+  }
+
+}
+
+.section--step-2 {
+  padding-bottom: 150px;
+
+  .row--text {
+    margin-top: 120px;
+  }
+}
+
+.section--step-3 {
+
+  padding-bottom: 250px;
+
+  .circle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .row--circle {
+    --gap: 50px;
+    margin-top: 250px;
+  }
+
+  .row--avatar {
+    margin-top: 110px;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.section--step-5 {
+  margin-top: 170px;
   padding-top: 100px;
+  color: var(--white);
+
+  .card {
+    margin-top: 50px;
+  }
+}
+
+.section--inside {
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  .box--bunny {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 50px;
+    align-items: center;
+    align-content: center;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    @include m(xl) {
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+  .box--item {
+    position: absolute;
+    width: 350px;
+    display: flex;
+    z-index: 1;
+    flex-wrap: wrap;
+    @include m(xl) {
+      width: 20vw;
+    }
+
+    &.isPhone {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 220px;
+    }
+
+    &.isHead {
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+    }
+
+    &.isCircles {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 220px;
+    }
+
+    &.isCta {
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .img--phone {
+    margin-top: 30px;
+  }
+
+  .cta {
+    margin-top: 50px;
+  }
+
+  .text {
+    position: relative;
+  }
+
+   img {
+    z-index: 1;
+  }
+
+  .text {
+    z-index: 2;
+  }
+}
+
+.section--sub {
+  padding-top: 400px;
   padding-bottom: 150px;
   position: relative;
 
-  .row--cards {
-    margin-top: 100px;
+  .row {
+    position: relative;
+    z-index: 2;
   }
 
   .img--bg {
@@ -267,7 +509,7 @@
     position: relative;
   }
 
-  .card--default {
+  .card {
     position: absolute;
     z-index: 2;
     max-width: 450px;
@@ -285,10 +527,15 @@
   }
 }
 
+.section--cards {
+  .row--cards {
+  }
+}
+
 .section--joy {
-  background: var(--grey-1);
   position: relative;
-  padding-bottom: 400px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   .card--review {
     margin-top: 30px;
@@ -310,7 +557,15 @@
   }
 }
 
-.section--back {
+.section--faq{
+  padding-top: 150px;
+  padding-bottom: 450px;
+  .faq{
+    margin-top: 50px;
+  }
+}
+
+.section--return {
   background: var(--grey-1);
   padding-top: 50px;
   padding-bottom: 80px;
@@ -342,7 +597,7 @@
 .section--more {
   background: var(--grey-1);
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 220px;
 
   .row--cards {
     flex-wrap: wrap;
@@ -355,10 +610,10 @@
 }
 
 .section--footer {
-  background: var(--purple-2);
   color: var(--white);
   padding-top: 20px;
   padding-bottom: 80px;
+  z-index: 1;
 
   .text--item {
     color: inherit;
@@ -392,4 +647,8 @@
     height: 100%;
   }
 
+}
+
+.section--empty {
+  margin-top: 50px
 }
