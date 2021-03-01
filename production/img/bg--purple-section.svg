@@ -1,0 +1,22 @@
+<svg width = "2560"
+     height = "2660"
+     viewBox = "0 0 2560 2660"
+     fill = "none"
+     xmlns = "http://www.w3.org/2000/svg">
+<path d = "M-79 150.5C-79 150.5 620.011 -32.1199 966.558 74.2979C1072.38 106.794 1180.03 20.8985 1313 2.0003C1428.61 -14.4296 1456.81 76.2564 1555.5 74.2974C1861 2.00031 2577 173 2577 173C2577 173 2571 2457 2571 2467.5C2571 2478 1515.63 2379.83 1267.1 2444.4C1018.57 2508.97 1027.18 2374.75 925.553 2392.29C702.833 2430.73 -61.5 2546 -61.5 2546L-79 150.5Z"
+      fill = "#452E57"/>
+
+<defs>
+<linearGradient id = "paint0_linear"
+                x1 = "878.453"
+                y1 = "900"
+                x2 = "880.537"
+                y2 = "1137.78"
+                gradientUnits = "userSpaceOnUse">
+<stop stop-color = "white"/>
+<stop offset = "1"
+      stop-color = "white"
+      stop-opacity = "0"/>
+</linearGradient>
+</defs>
+</svg>
