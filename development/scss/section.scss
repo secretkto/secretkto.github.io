@@ -279,7 +279,7 @@
 
     &:nth-child(4) {
       top: -15px;
-      left: -30px;
+      left: -25px;
     }
   }
 
@@ -633,14 +633,13 @@
   padding-top: 0px;
   padding-bottom: 80px;
 
+  .cta {
+    margin-top: 30px;
+  }
+
   .card--section {
     position: relative;
     z-index: 10;
-  }
-
-  .box--cta {
-    flex-wrap: wrap;
-    margin-top: 30px;
   }
 
   .box--numbers {
@@ -649,10 +648,6 @@
 
   .button {
     margin-top: 20px;
-  }
-
-  .text--price {
-    margin-right: 20px;
   }
 }
 
