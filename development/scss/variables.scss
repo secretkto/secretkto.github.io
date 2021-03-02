@@ -1,5 +1,6 @@
 :root {
   --gradient-purple-1: linear-gradient(246.72deg, #B783E7 5.69%, #9139BE 88.8%);
+  --gradient-purple-2: linear-gradient(180deg, #554071 1.08%, #452E57 20.35%, #3B2F4B 87.5%);
   --gradient-white-1: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
   --white: #ffffff;
   --black: #151515;
@@ -9,6 +10,7 @@
   --lime: #FFF6A4;
   --grey-1: #f5f5f5;
   --grey-3: #ECECEC;
+  --grey-4: #a9a9a9;
   --grey-5: #585858;
   --tile: #f0d4bb;
   --purple-1: #AD4DD2;
@@ -28,6 +30,7 @@
   --t-white-5: rgba(255, 255, 255, 0.5);
   --t-white-6: rgba(255, 255, 255, 0.68);
   --t-white-7: rgba(255, 255, 255, 0.75);
+  --t-grey-5: rgba(194, 194, 194, 0.51);;
   --t-blue-8: rgba(73, 134, 190, 0.79);
 
   --radius-xxs: 5px;
@@ -39,6 +42,7 @@
   --radius-lg-bot-rgt: 26px 26px 0 26px;
 
   --shadow-1: 0px 4px 17px -5px rgba(0, 0, 0, 0.25);
+  --shadow-filter-1: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.15));
 
   --container-padding: 40px;
   --container-padding-n: calc(var(--container-padding) * -1);
