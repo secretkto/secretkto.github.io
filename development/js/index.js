@@ -5,11 +5,17 @@ $(document).ready(function () {
     console.log('All svg inlined');
   });
 
-  let $modalOpen = $('.section--hero button');
+  let $videoHorizontalPlaceholder = $('.video--placeholder');
+  let $videoHorizontal = $('.video--horizontal');
+  let $modalOpen = $('.button--modal');
   let $modalClose = $('.modal .img--close');
   let $modal = $('.modal');
   let $faqItem = $('.faq .box--item');
   let $faqButton = $('.faq .button');
+  $videoHorizontalPlaceholder.click(function () {
+    $(this).removeClass('isActive');
+    $videoHorizontal.addClass('isActive');
+  });
   $modalClose.click(function () {
     $modal.removeClass('isActive')
   });
