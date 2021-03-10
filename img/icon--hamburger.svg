@@ -1,0 +1,18 @@
+<svg xmlns = "http://www.w3.org/2000/svg"
+     width = "59"
+     height = "59"
+     viewBox = "0 0 59 59"
+     fill = "none">
+  <rect x = "13"
+        y = "22"
+        width = "33"
+        height = "5"
+        rx = "2.5"
+        fill = "#ffffff"/>
+  <rect x = "13"
+        y = "33"
+        width = "33"
+        height = "5"
+        rx = "2.5"
+        fill = "#ffffff"/>
+</svg>
