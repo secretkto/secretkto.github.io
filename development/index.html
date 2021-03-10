@@ -34,13 +34,13 @@
            class="img--logo"
            alt="bunny logo">
       <div class="nav">
-        <a href="/"> Что умеет Ева</a>
-        <a href="/">Подписка</a>
-        <a href="/">Аксессуары</a>
-        <a href="/">FAQ</a>
-        <a href="/">Оплата и доставка</a>
-        <a href="/">Гарантия</a>
-        <a href="/">Где купить</a>
+        <a href="#anchor--what"> Что умеет Ева</a>
+        <a href="#anchor--sub">Подписка</a>
+        <a href="#anchor--acc">Аксессуары</a>
+        <a href="#anchor--faq">FAQ</a>
+        <a href="#anchor--pay">Оплата и доставка</a>
+        <a href="#anchor--return">Гарантия</a>
+        <a href="#anchor--where">Где купить</a>
       </div>
       <img src="./img/icon--hamburger.svg"
            class="img--hamburger"
@@ -51,16 +51,18 @@
   </div>
 </header>
 <div class="section section--hero">
-  <img class="bg bg--purple-hero"
-       src="./img/bg--purple-hero.svg"
-       alt="pattern with gradient">
+  <a href="/">
+    <img class="bg bg--purple-hero"
+         src="./img/bg--purple-hero.svg"
+         alt="pattern with gradient">
+  </a>
   <div class="container">
     <div class="row">
       <div class="col is6_10">
         <h1 class="text isXxl isNeucha">
           Зайка Ева - <br> помощник для родителей, лучший друг для малыша
         </h1>
-        <p class="text text--desc isSm">
+        <p class="text text--desc">
           Приучает ребенка чистить зубы, занимает днем, рассказывает сказку на ночь. Отвлекает от гаджетов, помогает
           выучить буквы и цифры, а еще выкраивает родителям больше времени для себя.
         </p>
@@ -88,7 +90,7 @@
        src="./img/bg--tan-1.svg"
        alt="pattern with gradient">
   <div class="container">
-    <h2 class="text isXl isC is100 isB700">
+    <h2 class="text isXl isC is100 isB600 isBlack1">
       Как устроена зайка Ева
     </h2>
     <p class="text text--title-desc isXs isC is100">
@@ -104,10 +106,10 @@
         <img src="./img/icon--puzzle.svg"
              class="img--icon img--puzzle"
              alt="puzzle icon">
-        <h4 class="text isSm is100 isB700 m--md isR text--vw-title">
+        <h4 class="text isSm is100 isB700 m--xs isR text--vw-title">
           Загадки
         </h4>
-        <p class="text isXs isR m--xxs text--vw-desc">
+        <p class="text isXxs isR m--xxs text--vw-desc">
           Добавьте три любимые сказки в избранное, и Ева будет рассказывать их независимо от дня недели.
         </p>
       </div>
@@ -118,10 +120,10 @@
         <img src="./img/pat--arrow-left-right.svg"
              class="img--icon img--pattern-1"
              alt="arrow icon">
-        <h4 class="text isSm is100 isB700 m--md isR text--vw-title">
+        <h4 class="text isSm is100 isB700 m--xs isR text--vw-title">
           Супер лапа
         </h4>
-        <p class="text isXs isR m--xxs text--vw-desc">
+        <p class="text isXxs isR m--xxs text--vw-desc">
           В лапе нет кнопки, но если приложить ее к наклейке, происходит магия: Ева учит чистить зубы
         </p>
       </div>
@@ -132,7 +134,7 @@
         <h4 class="text isSm is100 isB700 m--md isR text--vw-title">
           Сказки на ночь
         </h4>
-        <p class="text isXs isR isColXxs text--vw-desc">
+        <p class="text isXxs isR isColXxs text--vw-desc">
           Добавьте три любимые сказки в избранное, и зайка будет рассказывать их независимо от дня недели.
         </p>
       </div>
@@ -140,7 +142,7 @@
         <img src="./img/icon--heart.svg"
              class="img--icon img--heart"
              alt="heart icon">
-        <h4 class="text isSm is100 isB700 m--md text--vw-title">
+        <h4 class="text isSm is100 isB700 m--xs text--vw-title">
           Избранное
         </h4>
         <p class="text isXs isColXxs text--vw-desc">
@@ -276,6 +278,7 @@
   </div>
 </div>
 <div class="section section--step section--step-1">
+  <div id="anchor--what"></div>
   <img class="bg bg--blue"
        src="./img/bg--blue.svg"
        alt="pattern with gradient">
@@ -801,6 +804,7 @@
   </div>
 </div>
 <div class="section section--sub">
+  <div id="anchor--sub"></div>
   <img class="bg bg--grey"
        src="./img/bg--grey.svg"
        alt="pattern with gradient">
@@ -878,6 +882,7 @@
   </div>
 </div>
 <div class="section section--cards is2">
+  <div id="anchor--acc"></div>
   <div class="container">
     <div class="row row--cards">
       <div class="col is1_3">
@@ -956,7 +961,9 @@
     </div>
   </div>
 </div>
-<div class="section section--faq">
+<div class="section section--faq"
+>
+  <div id="anchor--faq"></div>
   <img class="bg bg--tan-3"
        src="./img/bg--tan-3.svg"
        alt="pattern with gradient">
@@ -1025,6 +1032,7 @@
   </div>
 </div>
 <div class="section section--return">
+  <div id="anchor--return"></div>
   <div class="container">
     <div class="card card--section isWhite isLg isRadFullLg">
       <div class="row">
@@ -1053,8 +1061,9 @@
     </div>
   </div>
 </div>
-<div class="section section--more">
+<div class="section section--where">
   <div class="container">
+    <div id="anchor--where"></div>
     <div class="row ">
       <div class="col col--text isNoM is4_10 is1_md">
         <h2 class="text isXl isB700 isBlack2">Где еще купить или пощупать</h2>
@@ -1220,16 +1229,16 @@
           электронным блоком внутри)
         </p>
         <ul>
-          <li>
+          <li class="text isXs">
             • зарядное устройство
           </li>
-          <li>
+          <li class="text isXs">
             • инструкция (также доступна в мобильном приложении)
           </li>
-          <li>
+          <li class="text isXs">
             • интерактивный плакат для изучения погоды
           </li>
-          <li>
+          <li class="text isXs">
             • набор интерактивных наклеек
           </li>
         </ul>

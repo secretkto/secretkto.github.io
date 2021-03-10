@@ -54,11 +54,8 @@ $(document).ready(function () {
   $('.slider--nav').slick({
     slidesToShow: 4,
     asNavFor: '.slider--main',
-    dots: false,
-    centerMode: false,
     focusOnSelect: true,
     arrows: false,
-    accessibility: true,
     onAfterChange: function (slide, index) {
       console.log("slider-nav change");
       console.log(this.$slides.get(index));
