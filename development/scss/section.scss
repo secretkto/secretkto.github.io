@@ -5,24 +5,80 @@
 .section--header {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 5px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  &.isFixed {
+    position: fixed;
+    z-index: 100;
+    justify-content: space-between;
+    backdrop-filter: blur(9px);
+    @supports (backdrop-filter: blur(9px)) {
+      .bg--color {
+        background: rgba(173, 77, 210, 0.4);
+      }
+    }
+    @supports not (backdrop-filter: blur(9px)) {
+      .bg--color {
+        background: rgba(173, 77, 210, 1);
+      }
+    }
+
+    .bg--header {
+      top: 0;
+      width: 100%;
+    }
+
+  }
 
   .img--logo {
     display: block;
     margin-right: 40px;
     margin-left: -10px;
     height: 50px;
+    @include m(lg) {
+      order: 2;
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
-  a {
-    display: inline-block;
-    margin-right: 50px;
-    color: var(--white);
-    font-weight: 300;
-    font-size: 17px;
+  .img--hamburger {
+    display: none;
+    cursor: pointer;
+
+    @include m(lg) {
+      display: block;
+      order: 1;
+    }
   }
+
+  .nav {
+    @include m(lg) {
+      display: none
+    }
+
+
+  }
+
+  .box--main {
+    @include m(lg) {
+      justify-content: space-between;
+    }
+  }
+
+  .button {
+    display: none;
+    @include m(lg) {
+      display: block;
+      order: 3;
+    }
+  }
+
 }
 
 .section--hero {
@@ -655,14 +711,22 @@
   background: var(--grey-1);
   padding-top: 50px;
   padding-bottom: 220px;
-
-  .row--cards {
-    flex-wrap: wrap;
-    margin-top: -30px;
+  @include m(md) {
+    padding-bottom: 160px;
   }
 
-  .col.is4_10 {
+  .col--text {
     padding-left: 40px;
+    @include m(md) {
+      padding-left: 0;
+    }
+  }
+
+  .col--cards {
+    margin-top: var(--gap-2n);
+    @include m(md) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -671,6 +735,7 @@
   padding-top: 20px;
   padding-bottom: 60px;
   z-index: 1;
+  background: var(--purple-2);
 
   .text--item {
     color: inherit;
