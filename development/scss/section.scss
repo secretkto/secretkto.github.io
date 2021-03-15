@@ -357,7 +357,6 @@
 
 .section--buy {
   padding-top: 150px;
-  background: var(--tile-1);
   @include m(sm) {
     padding-top: 70px;
   }
@@ -806,7 +805,7 @@
 }
 
 .section--step-6 {
-  padding-top: 50px;
+  padding-top: 100px;
   color: var(--white);
 
   .row {
