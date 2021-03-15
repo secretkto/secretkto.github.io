@@ -29,6 +29,11 @@
       @content
     }
   }
+  @if $breakpoint == 'mlg' {
+    @media(min-width: 1200px) {
+      @content
+    }
+  }
   @if $breakpoint == 'xl' {
     @media(max-width: 1441px) {
       @content
@@ -37,6 +42,40 @@
   @if $breakpoint == 'extra' {
     @media(min-width: 1921px) {
       @content
+    }
+  }
+  @if $breakpoint == 'msm' {
+    @media(min-width: 769px) {
+      @content
+    }
+  }
+  @if $breakpoint == 'mxs' {
+    @media(min-width: 577px) {
+      @content
+    }
+  }
+  @if $breakpoint == 'xs-sm' {
+    @media screen and (min-width: 577px) and (max-width: 768px) {
+      @content
+    }
+  }
+  @if $breakpoint == 'sm-lg' {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @content
+    }
+  }
+}
+
+@mixin b {
+  backdrop-filter: blur(9px);
+  @supports (backdrop-filter: blur(9px)) {
+    .bg--color {
+      background: rgba(153, 139, 236, 0.85);
+    }
+  }
+  @supports not (backdrop-filter: blur(9px)) {
+    .bg--color {
+      background: rgba(153, 139, 236, 1);
     }
   }
 }

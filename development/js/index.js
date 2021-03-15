@@ -16,16 +16,17 @@ $(document).ready(function () {
   let $faqItem = $('.faq .box--item');
   let $faqButton = $('.faq .button');
   let $header = $('.section--header');
+  let $body = $('body');
 
   $videoHorizontalPlaceholder.click(function () {
     $(this).removeClass('isActive');
     $videoHorizontal.addClass('isActive');
   });
   $menuOpen.click(function () {
-    $menu.toggleClass('isActive')
+    $body.toggleClass('isHeaderActive')
   });
   $menuClose.click(function () {
-    $menu.removeClass('isActive')
+    $body.toggleClass('isHeaderActive')
   });
   $modalClose.click(function () {
     $modal.removeClass('isActive')
