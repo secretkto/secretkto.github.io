@@ -330,19 +330,23 @@
   }
 
   &.slider--main {
+    width: 465px;
+    height: 465px;
     position: relative;
 
+    .slick-list {
+      height: 100%;
+    }
+
     .slick-slide {
-      min-height: 465px;
-      position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      height: 100%;
+      width: 100%;
     }
 
     .slick-track {
       display: flex;
+      height: 100%;
     }
 
   }
@@ -518,13 +522,11 @@
 
   .col {
     &.col--img {
-      @include m(lg) {
-        width: 465px;
-      }
+      width: 465px;
     }
 
     &.col--text {
-      @include m(lg) {
+      @include m(md) {
         width: auto;
         margin-top: 50px;
       }
@@ -1058,7 +1060,6 @@
   margin-right: var(--gap-n);
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .col {
@@ -1205,14 +1206,23 @@
   @at-root .row.isFooter & {
     &:first-child {
       width: calc(100% * 4 / 21 - var(--gap-2));
+      @include m(xs) {
+        width: calc(100% / 2 - var(--gap-2)) !important;
+      }
     }
 
     &:nth-child(n+2):nth-last-child(n+2) {
       width: calc(100% * 4 / 21 - var(--gap-2));
+      @include m(xs) {
+        width: calc(100% / 2 - var(--gap-2)) !important;
+      }
     }
 
     &:last-child {
       width: calc(100% * 5 / 21 - var(--gap-2));
+      @include m(xs) {
+        width: calc(100% / 1 - var(--gap-2)) !important;
+      }
     }
   }
 }
@@ -1367,7 +1377,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50% translateZ(0));
+    transform: translate(-50%, -50%) translateZ(0);
   }
 
   &.img--close {
@@ -1472,6 +1482,9 @@
 
   &.bg--grey {
     top: -120px;
+    @include m(sm) {
+      height: 4000px;
+    }
   }
 
   &.bg--lavender {
@@ -1527,7 +1540,7 @@
   }
 
   &.bg--purple-hero {
-    top: 0;
+    top: -10px;
     min-width: 100%;
     min-height: 110%;
     @include m(sm) {

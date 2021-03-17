@@ -22,15 +22,13 @@ $(document).ready(function () {
     $body.toggleClass('isHeaderActive')
   });
   $modalClose.click(function () {
-    $modal.removeClass('isActive')
+    $modal.removeClass('isActive');
+    $body.removeClass('isModalActive');
   });
   $modalOpen.click(function () {
     $modal.addClass('isActive');
     $body.addClass('isModalActive');
     $('.slider--main').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      draggable: true,
       arrows: true,
       fade: true,
       asNavFor: '.slider--nav',
