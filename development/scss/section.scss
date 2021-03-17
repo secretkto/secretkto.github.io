@@ -550,7 +550,6 @@
       top: 0;
       position: relative;
       display: block;
-      margin: auto;
       height: 600px;
       margin: 15px auto -150px auto;
     }
@@ -757,8 +756,8 @@
 }
 
 .section--step-5 {
-  margin-top: 170px;
   padding-top: 100px;
+  margin-top: -100px;
   color: var(--white);
 
   .row {
@@ -1060,15 +1059,26 @@
 .section--cards {
   &.is1 {
     padding-top: 100px;
+    padding-bottom: 350px;
+    position: relative;
 
     .col {
       flex-direction: column;
       margin-top: 225px;
+      @include m(xs) {
+        width: 350px;
+      }
     }
   }
 
   &.is2 {
     margin-top: 200px;
+
+    .col {
+      @include m(xs) {
+        max-width: 350px;
+      }
+    }
   }
 }
 

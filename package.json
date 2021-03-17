@@ -27,7 +27,8 @@
     "watch:js": "onchange 'development/js' -- npm run build:js",
     "watch:img": "onchange 'development/img' -- npm run build:img",
     "watch:all": "npm-run-all -p serve watch:scss watch:css watch:js watch:html watch:img",
-    "start": "npm run build:all && npm run watch:all"
+    "start": "npm run build:all && npm run watch:all",
+    "production": "npm run build:all"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",

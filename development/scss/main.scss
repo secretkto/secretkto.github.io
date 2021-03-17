@@ -30,6 +30,11 @@ body {
       overflow: hidden;
     }
   }
+
+  &.isModalActive {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 a {
