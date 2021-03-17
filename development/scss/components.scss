@@ -333,6 +333,9 @@
     width: 465px;
     height: 465px;
     position: relative;
+    @include m(xs){
+      width: 300px;
+    }
 
     .slick-list {
       height: 100%;
@@ -496,6 +499,13 @@
     transform: translatex(-50%)
   }
 
+  @include m(xs) {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+
   &.isActive {
     display: block;
   }
@@ -503,6 +513,10 @@
   .card {
     max-height: 800px;
     overflow-y: auto;
+    @include m(xs) {
+      max-height: 100vh;
+      height: 100%;
+    }
   }
 
   .cta {

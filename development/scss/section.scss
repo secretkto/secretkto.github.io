@@ -217,12 +217,18 @@
     }
   }
 
-  .box--item,
-  .box--title {
+  .box--item {
     @include m(xs-sm) {
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  .text--title-desc {
+    @include m(xs-sm) {
+      max-width: 400px;
+      margin-left: 0;
     }
   }
 
