@@ -333,7 +333,7 @@
     width: 465px;
     height: 465px;
     position: relative;
-    @include m(xs){
+    @include m(xs) {
       width: 300px;
     }
 
@@ -667,6 +667,9 @@
 
   &.isLg {
     padding: 40px;
+    @include m(sm) {
+      padding: 30px;
+    }
   }
 
   &.card--review {
@@ -1528,10 +1531,13 @@
   }
 
   &.bg--tan-3 {
-    height: 120%;
-    top: 50%;
+    height: 160%;
+    top: -220px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    @include m(sm){
+        top: -150px;
+    }
   }
 
   &.bg--tan-4 {
