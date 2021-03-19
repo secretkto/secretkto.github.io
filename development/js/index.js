@@ -40,6 +40,20 @@ $(document).ready(function () {
       asNavFor: '.slider--main',
       focusOnSelect: true,
       arrows: false,
+      responsive: [
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 425,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+      ],
       onAfterChange: function (slide, index) {
         $('.isActive').removeClass('isActive');
         $(this.$slides.get(index)).addClass('isActive');

@@ -333,8 +333,8 @@
     width: 465px;
     height: 465px;
     position: relative;
-    @include m(xs) {
-      width: 300px;
+    @include m(md) {
+      width: 100%;
     }
 
     .slick-list {
@@ -510,9 +510,10 @@
     display: block;
   }
 
-  .card {
+  .card.isLg {
     max-height: 800px;
     overflow-y: auto;
+    padding: 40px;
     @include m(xs) {
       max-height: 100vh;
       height: 100%;
@@ -530,19 +531,27 @@
     overflow: hidden;
     @include m(md) {
       flex-wrap: wrap;
+      margin: 0;
+      min-width: 100%;
     }
-
   }
 
   .col {
+    @include m(md) {
+      margin: 0;
+    }
+
     &.col--img {
       width: 465px;
+      @include m(md) {
+        width: 100%;
+      }
     }
 
     &.col--text {
       @include m(md) {
         width: auto;
-        margin-top: 50px;
+        margin-top: 30px;
       }
     }
   }
@@ -1531,12 +1540,13 @@
   }
 
   &.bg--tan-3 {
-    height: 160%;
+    min-height: 160%;
+    min-width: 110%;
     top: -220px;
     left: 50%;
     transform: translateX(-50%);
-    @include m(sm){
-        top: -150px;
+    @include m(sm) {
+      top: -150px;
     }
   }
 
