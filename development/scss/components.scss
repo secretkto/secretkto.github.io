@@ -974,18 +974,11 @@
     margin-top: 45px;
   }
 
-  &.text--title-main {
-    @include m(sm) {
-      text-align: left;
-    }
-  }
-
   &.text--title-desc {
     max-width: 700px;
     margin: 10px auto 0;
     @include m(sm) {
       margin-top: 20px;
-      text-align: left;
     }
   }
 
@@ -1229,6 +1222,12 @@
     }
   }
 
+  &.is0_md {
+    @include m(md) {
+      display: none;
+    }
+  }
+
   @at-root .row.isFooter & {
     &:first-child {
       width: calc(100% * 4 / 21 - var(--gap-2));
@@ -1387,10 +1386,6 @@
   &.img--phone {
     z-index: 2;
     position: relative;
-
-    &.isMd {
-      height: 600px;
-    }
   }
 
   &.isRelativeCenter {
@@ -1428,7 +1423,7 @@
   .img {
     margin-left: 10px;
     display: inline-block;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 
     &.img--star {
       width: 30px;
@@ -1532,11 +1527,15 @@
         transform: translateX(-50%) rotate(5deg)
       }
     }
-    animation: rotate-tan-2 50s linear infinite alternate-reverse;
     top: -80px;
     height: 126%;
     min-width: 100%;
-
+    @include m(mmd) {
+      animation: rotate-tan-2 50s linear infinite alternate-reverse;
+    }
+    @include m(sm) {
+      height: 100%;
+    }
   }
 
   &.bg--tan-3 {
@@ -1562,10 +1561,16 @@
     width: 125%;
     top: 50%;
     transform: translate(-50%, -58%);
-    animation: rotate-tan-4 50s linear infinite alternate-reverse;
-
+    @include m(mmd) {
+      animation: rotate-tan-4 50s linear infinite alternate-reverse;
+    }
     @include m(lg) {
       width: 125vw;
+    }
+    @include m(sm) {
+      width: auto;
+      height: 100%;
+      transform: translate(-50%, -73%) rotate(90deg);
     }
   }
 

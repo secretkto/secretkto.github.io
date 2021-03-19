@@ -129,12 +129,11 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerPadding: '120px',
-          centerMode: false,
           centerMode: true,
         }
       },
       {
-        breakpoint: 375,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

@@ -44,6 +44,11 @@
       @content
     }
   }
+  @if $breakpoint == 'mmd' {
+    @media(min-width: 991px) {
+      @content
+    }
+  }
   @if $breakpoint == 'msm' {
     @media(min-width: 769px) {
       @content
@@ -76,6 +81,21 @@
   @supports not (backdrop-filter: blur(9px)) {
     .bg--color {
       background: rgba(153, 139, 236, 1);
+    }
+  }
+}
+
+@mixin hide($breakpoint) {
+  &.isMobile {
+    display: none;
+    @include m($breakpoint) {
+      display: block;
+    }
+  }
+
+  &.isDesktop {
+    @include m($breakpoint) {
+      display: none;
     }
   }
 }
