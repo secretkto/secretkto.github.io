@@ -20,6 +20,10 @@
     }
   }
 
+  &.isInfo {
+    background: var(--purple-2);
+  }
+
   .isHeaderActive & {
     position: fixed;
 
@@ -106,8 +110,8 @@
 
   .text--title {
     max-width: 650px;
-    @include m(md) {
-      font-size: 7vw;
+    @include m(lg) {
+      font-size: 5vw;
     }
     @include m(xs) {
       font-size: 35px;
@@ -118,8 +122,8 @@
     margin-top: 30px;
     max-width: 520px;
     font-weight: 300;
-    @include m(md) {
-      font-size: 2vw;
+    @include m(lg) {
+      font-size: 1.5vw;
     }
     @include m(sm) {
       font-size: 19px;
@@ -140,7 +144,7 @@
     filter: var(--shadow-filter-1);
     @include m(lg) {
       left: 0;
-      height: 55vw;
+      height: 35vw;
       transform: translateX(-10%) scale(-1, 1);
 
     }
@@ -1074,6 +1078,7 @@
       }
       @include m(sm) {
         width: 50%;
+        z-index: 2;
       }
     }
 
@@ -1088,10 +1093,10 @@
         top: -3vw;
         width: 35vw;
       }
-
       @include m(sm) {
         width: 50%;
         transform: none;
+        z-index: 1;
       }
     }
 
@@ -1106,6 +1111,8 @@
       }
       @include m(sm) {
         width: 100%;
+        z-index: 0;
+
         .text {
           max-width: 200px;
         }
@@ -1126,6 +1133,7 @@
       @include m(sm) {
         width: 100%;
         margin-top: 80px;
+
         p {
           max-width: 300px;
         }
@@ -1155,12 +1163,33 @@
       margin-top: 2vw;
       transform: translateX(-1vw);
     }
+    @include m(sm) {
+      margin-top: 30px;
+    }
 
     @include hide(sm)
 
   }
 
+  .img--placeholder {
+    width: 345px;
+    height: 250px;
+    transform: rotate(22deg) translateY(50px);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    @include m(sm-lg) {
+      width: 30vw;
+      height: 20vw;
+    }
+    @include m(sm) {
+      position: absolute;
+      transform: translate(70%, 30%) rotate(22deg);
+      bottom: 0;
+    }
+  }
+
   .img--calendar {
+    display: none;
     @include m(sm-lg) {
       width: 30vw;
     }
@@ -1226,6 +1255,7 @@
 .section--sub {
   position: relative;
   padding-top: 350px;
+  padding-bottom: 200px;
   @include m(md) {
     padding-top: 50px;
   }
@@ -1290,7 +1320,7 @@
 
   .card {
     position: absolute;
-    z-index: 2;
+    z-index: 8;
     max-width: 450px;
     bottom: -100px;
     @include m(sm) {
@@ -1327,7 +1357,6 @@
   }
 
   &.is2 {
-    padding-top: 200px;
     position: relative;
 
     @include m(md) {
@@ -1456,6 +1485,22 @@
     padding-bottom: 160px;
   }
 
+  .row {
+    @include m(sm) {
+      --gap: 10px
+    }
+  }
+
+  .card {
+    position: relative;
+    padding: 20px;
+  }
+
+  img {
+    position: absolute;
+    width: calc(100% - 40px);
+  }
+
   .col--text {
     padding-left: 40px;
     @include m(md) {
@@ -1477,23 +1522,131 @@
   padding-bottom: 60px;
   background: var(--purple-3);
 
+  .container {
+    position: relative;
+  }
+
   .text--item {
     color: inherit;
     display: inline-block;
+    width: 100%;
 
     &:not(:first-child) {
       margin-top: 10px;
     }
   }
 
-  .circle:not(:last-child) {
-    margin-right: 10px;
+  .text.isMobile {
+    display: none;
+    @include m(lg) {
+      display: block;
+    }
+    @include m(md) {
+      display: none;
+    }
   }
 
-  .img--visa {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  .col {
+    @include m(sm) {
+      margin-top: 20px;
+    }
+
+    &.col--logo {
+      width: calc(100% * 3 / 21 - var(--gap-2));
+      @include m(md) {
+        width: calc(100% / 3 - var(--gap-2)) !important;
+      }
+      @include m(sm) {
+        order: 1;
+        width: calc(100% / 2 - var(--gap-2)) !important;
+      }
+    }
+
+    &:nth-child(n+2):nth-last-child(n+2) {
+      width: calc(100% * 4 / 21 - var(--gap-2));
+      @include m(lg) {
+        width: calc(100% * 4 / 18 - var(--gap-2));
+      }
+      @include m(md) {
+        width: calc(100% / 3 - var(--gap-2)) !important;
+      }
+      @include m(sm) {
+        width: calc(100% / 2 - var(--gap-2)) !important;
+      }
+    }
+
+    &.col--data.is1 {
+      @include m(sm) {
+        order: 2;
+      }
+    }
+
+    &.col--data.is2 {
+      @include m(sm) {
+        order: 4;
+      }
+    }
+    &.col--data.is3 {
+      @include m(sm) {
+        order: 6;
+      }
+    }
+
+    &.col--visa {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: 0;
+      display: flex;
+      align-items: flex-end;
+      @include m(md) {
+        position: static;
+        width: calc(100% * 1 / 2 - var(--gap-2));
+        margin-right: var(--gap);
+      }
+      @include m(sm){
+          order: 6
+      }
+    }
+
+    &.col--social {
+      flex-grow: 1;
+      justify-content: flex-end;
+      display: flex;
+      @include m(lg) {
+        flex-grow: 1;
+        justify-content: flex-end;
+        display: flex;
+      }
+      @include m(md) {
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: calc(100% * 1 / 2 - var(--gap-2));
+      }
+      @include m(sm){
+          order: 3
+      }
+
+    }
+
+    &.isDesktop {
+      @include m(lg) {
+        display: none;
+      }
+      @include m(md) {
+        display: block;
+      }
+    }
+  }
+
+  .circle {
+    @include m(sm) {
+      margin-top: 5px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   .img--logo {
@@ -1501,6 +1654,9 @@
     left: 20px;
     top: 10px;
     height: 80px;
+    @include m(lg) {
+      left: 0
+    }
   }
 
   .box--cr {
@@ -1509,10 +1665,129 @@
     justify-content: space-between;
     height: 100%;
   }
+
+  .box--social {
+    @include m(sm) {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .section--empty {
   margin-top: 50px;
+}
+
+.section--info {
+  background: var(--grey-1);
+  color: var(--black-2);
+  font-size: 18px;
+  @include m(sm) {
+    font-size: 14px;
+  }
+
+  &.isPay {
+    padding-top: 200px;
+    z-index: 7;
+    @include m(md) {
+      padding-top: 150px;
+    }
+  }
+
+  &.isDelievery {
+    padding-top: 180px;
+  }
+
+  &.isQuestions {
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    @include m(md) {
+      padding-top: 60px;
+    }
+  }
+
+  .table {
+    margin-top: 60px;
+  }
+
+  .box {
+    display: block;
+    position: relative;
+  }
+
+  .box--button {
+    display: flex;
+    margin-top: 30px;
+
+    p {
+      margin-top: 0;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-left: 20px;
+    }
+  }
+
+  .box--info {
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  h2 {
+    font-family: 'Neucha', cursive;
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    @include m(sm) {
+      font-size: 40px;
+    }
+  }
+
+  h3 {
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 0;
+    @include m(sm) {
+      font-size: 21px;
+    }
+
+    &:first-of-type {
+      margin-top: 30px;
+    }
+  }
+
+  h4 {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: auto;
+    @include m(sm) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+
+    & + p {
+      margin-top: 15px;
+    }
+  }
+
+  ul {
+    margin-top: 30px;
+    list-style: disc;
+    padding-left: 20px;
+  }
+
 }
 
 #anchor--sub,
